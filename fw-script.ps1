@@ -21,7 +21,7 @@ function new-firewall {
         Write-Host "`n--- $Direction Firewall Rules ---`n" -ForegroundColor Cyan
 
         # User prompts
-        $ports = Read-Host "Enter $Direction port(s) (comma-separated – 80,443,8080)"
+        $ports = Read-Host "Enter $Direction port(s) (comma-separated - 80,443,8080)"
         $protocol = Read-Host "Enter protocol (TCP/UDP)"
         $action = Read-Host "Allow or Block connection? (Allow/Block)"
         $ruleName = Read-Host "Enter a name for this rule"
@@ -68,11 +68,8 @@ function new-firewall {
 }
 
 
-# Inbound rules
-Prompt-ForFirewallRule -Direction "Inbound"
+# Call function for Inbound rules
+new-firewall -Direction "Inbound"
 
-# Outbound rules
-Prompt-ForFirewallRule -Direction "Outbound"
-
-# Call the function
-new-firewall
+# Call function for Outbound rules
+new-firewall -Direction "Outbound"
