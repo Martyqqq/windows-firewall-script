@@ -1,5 +1,7 @@
 # windows-firewall-script
-A dynamic PowerShell script for securing network communications, based off user input.
+A dynamic PowerShell script for securing network communications, based on user input. \
+This was originally created for CCDC (Collegiate Cyber Defense Competition). \
+I cannot say that I recommend every user utilize this script, as it's restrictive in nature and may disrupt everyday tasks.
 
 ## Disclaimer
 > [!CAUTION]
@@ -16,19 +18,25 @@ Set-ExecutionPolicy Bypass -Force
 ```
 4. Run the script. No need to call the function as it is called at the end of the script.
 5. Enter the variables desired.
+
 ![example.PNG](example.PNG)
 
 ## Features
-- Asks user for ports
-- Asks user for the protocol (TCP/UDP)
-- Asks user if the rule will allow or block the connection
-- Asks user for the rule's display name
-- Asks user for a remote address (optional)
-- Asks user if they would like to create more rules for the current direction
-- Asks user for inbound and outbound rules
+- Enables firewall on all profiles
+- Set's all profiles on a block/block for unknown connections
+- Enables logging
+- Set log size to max size (32.767 MB)
+- Disables and removes all current rules; in order to clean up and allow for easier management
+- Port selection
+- Protocol selection (TCP/UDP)
+- Script can allow or block the connection
+- Ability to name the rule's display name
+- Remote address field (optional)
+- Ability to create multiple rules for the current direction
+- Covers inbound and outbound rules
 
 ## History
-I first created this script in April 2025 as I was preparing for NCCDC. \
-This script ultimately was not used as we deemed it take up too much time, and in NCCDC, you need all the time you can get in the early stages. \
+I first created this script in April 2025 as I was preparing for NCCDC. 
+This script ultimately was not used as we deemed it take up too much time, and in NCCDC, you need all the time you can get in the early stages. 
 We eventually went on to using a more static script that had everything, and we could manually create rules later if needed. \
 This was still a fun challenge to get working. I would like to expand on this, eventually.
