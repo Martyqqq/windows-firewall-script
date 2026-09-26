@@ -19,7 +19,9 @@ Set-ExecutionPolicy Bypass -Force
 4. Run the script. No need to call the function as it is called at the end of the script.
 5. Enter the variables desired.
 
-![example.PNG](example.PNG)
+![commands and options](/assets/1.PNG)
+![firewall profiles](/assets/2.PNG)
+![created rule(s)](/assets/3.PNG)
 
 ## Features
 - Enables firewall on all profiles
